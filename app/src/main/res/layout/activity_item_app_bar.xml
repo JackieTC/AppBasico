@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    tools:context=".MainActivity"
+    android:background="#ecf7fb">
+
+    <android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
+        android:layout_height="wrap_content" android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@drawable/dientes">
+
+        <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:titleTextColor="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <TextView android:id="@+id/LblEtiqueta"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:text="Ve al dentista te va a gustar Sonreir :)"
+            android:textColor="#4dcee5"
+            android:fontFamily="@string/title_item_detail"
+            android:typeface="monospace"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="182dp"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:adjustViewBounds="true"
+            android:src="@drawable/drmuelitas" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" android:id="@+id/frameLayout">
+
+        <include layout="@layout/activity_item_list" />
+
+        <TextView
+            android:layout_width="300dip"
+            android:layout_height="100dip"
+            android:text="Consejo"
+            android:layout_marginTop="79dp"
+            android:id="@+id/textView"
+            android:layout_gravity="center"
+            android:textColor="#1f5b80"
+            android:textSize="18dp"
+            android:autoText="false" />
+
+        <TextView
+            android:layout_width="300dip"
+            android:layout_height="150dip"
+            android:text=" Estamos Ubicados en la Av. Bolognesi cuadra 5. Centro Histórico de Tacna"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal|top"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit ="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:minLines="1"
+            android:clickable="true"
+            />
+
+        <ImageView
+            android:layout_width="200dip"
+            android:layout_height="150dip"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal|bottom"
+            android:src="@drawable/logoclinica" />
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin" android:src="@android:drawable/ic_dialog_email"
+        android:layout_gravity="bottom|end" />
+
+
+</android.support.design.widget.CoordinatorLayout>
